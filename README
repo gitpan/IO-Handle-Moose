@@ -1,0 +1,45 @@
+NAME
+    IO::Handle::Moose - Moose reimplementation of IO::Handle with
+    improvements
+
+SYNOPSIS
+      use IO::Handle::Moose;
+
+      $fh = new IO::Handle::Moose;
+      $fh->fdopen(fileno(STDIN));
+      print $fh->getline;
+      $file = $fh->slurp;
+      $fh->close;
+
+      $fh = fdopen IO::Handle::Moose \*STDERR, '>';
+      autoflush $fh 1;
+      say $fh 'Some text';
+      undef $fh;  # calls close at DESTROY
+
+DESCRIPTION
+    This class provides an interface mostly compatible with IO::Handler. The
+    differences:
+
+    *   It is based on Moose object framework.
+
+    *   It uses Exception::Base for signaling errors. Most of methods are
+        throwing exception on failure.
+
+    *   The modifiers like input_record_separator are supported on
+        per-filehandler basis.
+
+    *   It also implements additional methods like say, slurp.
+
+    *   It is pure-Perl implementation.
+
+AUTHOR
+    Piotr Roszatycki <dexter@debian.org>
+
+LICENSE
+    Copyright 2007, 2008 by Piotr Roszatycki <dexter@debian.org>.
+
+    This program is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
+    See http://www.perl.com/perl/misc/Artistic.html
+
