@@ -1,6 +1,6 @@
 ---
 name: IO-Handle-Moose
-version: 0.01
+version: 0.0101
 author:
   - 'Piotr Roszatycki <dexter@debian.org>'
 abstract: Moose reimplementation of IO::Handle with improvements
@@ -10,6 +10,7 @@ resources:
 requires:
   Exception::Base: 0.12
   Exception::System: 0.07
+  File::Stat::Moose: 0
   MooseX::GlobRef::Object: 0.02
   perl: 5.006
 build_requires:
@@ -17,7 +18,7 @@ build_requires:
 provides:
   IO::Handle::Moose:
     file: lib/IO/Handle/Moose.pm
-    version: 0.01
+    version: 0.0101
   IO::Handle::Moose::Syscall:
     file: lib/IO/Handle/Moose.pm
   IO::Handle::Moose::Tie:

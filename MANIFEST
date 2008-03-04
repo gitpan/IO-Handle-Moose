@@ -1,4 +1,5 @@
 Build.PL
+Changes
 eg/uniq_func.pl
 eg/uniq_oo.pl
 lib/IO/Handle/Moose.pm

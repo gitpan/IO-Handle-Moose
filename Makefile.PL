@@ -10,6 +10,7 @@ WriteMakefile
           'PREREQ_PM' => {
                            'Test::Unit::Lite' => '0.09',
                            'MooseX::GlobRef::Object' => '0.02',
+                           'File::Stat::Moose' => 0,
                            'Exception::System' => '0.07',
                            'Exception::Base' => '0.12'
                          }

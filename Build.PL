@@ -14,6 +14,7 @@ my $build = Module::Build->new(
         'perl'                    => 5.006,
         'Exception::Base'         => 0.12,
         'Exception::System'       => 0.07,
+        'File::Stat::Moose'       => 0,
 	'MooseX::GlobRef::Object' => 0.02,
     },
     optional => {
